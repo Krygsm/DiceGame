@@ -109,14 +109,14 @@ public class MainActivity extends AppCompatActivity
     {
         System.out.println(newScore);
         gameScore += newScore;
-        rollScoreView.setText("Wynik tego losowania: " + String.valueOf(newScore));
-        gameScoreView.setText("Wynik gry: " + String.valueOf(gameScore));
+        rollScoreView.setText("Wynik tego losowania: " + newScore);
+        gameScoreView.setText("Wynik gry: " + gameScore);
     }
 
     void updateRollCount()
     {
         rollCount++;
-        rollCountView.setText("Liczba rzutów: " + String.valueOf(rollCount));
+        rollCountView.setText("Liczba rzutów: " + rollCount);
     }
 
     void displayDiceResults(int[] diceResults)
