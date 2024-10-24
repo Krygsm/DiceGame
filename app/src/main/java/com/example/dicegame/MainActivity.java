@@ -1,12 +1,9 @@
 package com.example.dicegame;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
@@ -39,6 +36,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         rollButton = findViewById(R.id.rollButton);
         resetButton = findViewById(R.id.resetButton);
 
@@ -58,14 +56,17 @@ public class MainActivity extends AppCompatActivity
         gameScoreView = findViewById(R.id.gameScore);
         rollCountView = findViewById(R.id.rollCount);
 
-        rollButton.setOnClickListener(new View.OnClickListener() {
+
+        rollButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 rollDice();
             }
         });
 
-        resetButton.setOnClickListener(new View.OnClickListener() {
+        resetButton.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 resetGame();
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity
 
     void resetGame()
     {
-        for(int i = 0; i < rolls.length; i ++)  rolls[i].setText(" ? ");
+        for(int i = 0; i < rolls.length; i ++) rolls[i].setText(" ? ");
 
         rollScore = 0;
         gameScore = 0;
@@ -114,7 +115,8 @@ public class MainActivity extends AppCompatActivity
 
     void updateRollCount()
     {
-        rollCount++; rollCountView.setText("Liczba rzutów: " + String.valueOf(rollCount));
+        rollCount++;
+        rollCountView.setText("Liczba rzutów: " + String.valueOf(rollCount));
     }
 
     void displayDiceResults(int[] diceResults)
