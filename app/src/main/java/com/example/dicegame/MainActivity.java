@@ -39,11 +39,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(savedInstanceState != null)
-        {
-
-        }
-
         rollButton = findViewById(R.id.rollButton);
         resetButton = findViewById(R.id.resetButton);
 
